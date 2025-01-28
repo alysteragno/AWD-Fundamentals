@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Fundamentals - Demonstration</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #output {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Back</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="fundamental-section">
+            <h2>1. Variables</h2>
+            <p><strong>Definition:</strong> Variables are used to store data that can be used and manipulated later in a program.</p>
+            <div class="code-snippet">
+                <pre><code>let age = 25;</code></pre>
+            </div>
+            <p>This is an example of declaring a variable in JavaScript where the variable <code>age</code> is storing the number <code>25</code>.</p>
+            <label for="ageInput">Enter Age:</label>
+            <input type="number" id="ageInput" value="25" min="0">
+            <button onclick="showAge()">Check Age</button>
+            <p id="output"></p>
+        </section>
+
+        <section class="fundamental-section">
+            <h2>2. Control Structures</h2>
+            <p><strong>Definition:</strong> Control structures allow the program to make decisions and repeat actions.</p>
+            <div class="code-snippet">
+                <pre><code>if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}</code></pre>
+            </div>
+            <p>This code checks if the variable <code>age</code> is greater than or equal to 18. If true, it prints "You are an adult." Otherwise, it prints "You are a minor."</p>
+            <label for="controlAge">Enter Age to Check:</label>
+            <input type="number" id="controlAge" value="25" min="0">
+            <button onclick="checkAdult()">Check Adult Status</button>
+            <p id="adultOutput"></p>
+        </section>
+
+        <section class="fundamental-section">
+            <h2>3. Functions</h2>
+            <p><strong>Definition:</strong> Functions are blocks of code that can be reused to perform specific tasks.</p>
+            <div class="code-snippet">
+                <pre><code>function greet(name) {
+    return "Hello, " + name + "!";
+}</code></pre>
+            </div>
+            <p>This is an example of a simple function called <code>greet</code>. It takes one parameter, <code>name</code>, and returns a greeting message.</p>
+            <label for="nameInput">Enter Your Name:</label>
+            <input type="text" id="nameInput" placeholder="Enter name">
+            <button onclick="greetUser()">Greet Me</button>
+            <p id="greetingOutput"></p>
+        </section>
+
+        <section class="fundamental-section">
+            <h2>4. Data Structures</h2>
+            <p><strong>Definition:</strong> Data structures allow us to store and organize data efficiently for easier access and manipulation.</p>
+            <div class="code-snippet">
+                <pre><code>let person = {
+    name: "John",
+    age: 30,
+    profession: "Developer"
+};</code></pre>
+            </div>
+            <p>This example shows a simple object <code>person</code>, which is a data structure containing multiple properties (name, age, profession).</p>
+            <label for="personName">Enter Person's Name:</label>
+            <input type="text" id="personName" value="John">
+            <label for="personAge">Enter Person's Age:</label>
+            <input type="number" id="personAge" value="30">
+            <label for="personProfession">Enter Person's Profession:</label>
+            <input type="text" id="personProfession" value="Developer">
+            <button onclick="updatePerson()">Update Person</button>
+            <p id="personOutput"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Marasigan, Alyster Agno</p>
+    </footer>
+
+    <script>
+        function showAge() {
+            const age = document.getElementById('ageInput').value;
+            document.getElementById('output').innerText = `Age is: ${age}`;
+        }
+
+        function checkAdult() {
+            const age = document.getElementById('controlAge').value;
+            const result = age >= 18 ? "You are an adult." : "You are a minor.";
+            document.getElementById('adultOutput').innerText = result;
+        }
+
+        function greetUser() {
+            const name = document.getElementById('nameInput').value;
+            const greeting = `Hello, ${name}!`;
+            document.getElementById('greetingOutput').innerText = greeting;
+        }
+
+        function updatePerson() {
+            const name = document.getElementById('personName').value;
+            const age = document.getElementById('personAge').value;
+            const profession = document.getElementById('personProfession').value;
+
+            const person = {
+                name: name,
+                age: age,
+                profession: profession
+            };
+
+            document.getElementById('personOutput').innerText = `Person's Info: Name: ${person.name}, Age: ${person.age}, Profession: ${person.profession}`;
+        }
+    </script>
+</body>
+</html>

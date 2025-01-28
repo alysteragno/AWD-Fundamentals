@@ -1,0 +1,204 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f0f6; /* Light pastel pink background */
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 50px; /* Prevent footer overlap */
+}
+
+/* Header */
+header {
+    background-color: #f5a6c2; /* Soft pastel pink */
+    color: white;
+    padding: 30px 0;
+    margin: 0;
+}
+
+#header-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.fundamental-section {
+    background-color: #f1e0e6; /* Light pastel pink background for sections */
+    border-radius: 8px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fundamental-section h2 {
+    font-size: 1.8rem;
+    color: #4e3b4e; /* Muted brownish purple for contrast */
+    margin-bottom: 10px;
+}
+
+.fundamental-section p {
+    font-size: 1.1rem;
+    color: #7e6f7e; /* Soft grayish purple */
+    margin-bottom: 20px;
+}
+
+.fundamental-section .code-snippet {
+    background-color: #fff4f9; /* Light pinkish background for code */
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #4e3b4e;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fundamental-section .code-snippet code {
+    display: block;
+    white-space: pre-wrap; /* Ensure code wraps properly */
+}
+
+/* Styling for Inputs & Buttons */
+input[type="number"],
+input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #d1a6d4;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 400px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #f5a6c2;
+    outline: none;
+}
+
+button {
+    background-color: #f5a6c2; /* Soft pastel pink */
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e1849e; /* Darker pastel pink on hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Output Messages */
+#output,
+#adultOutput,
+#greetingOutput,
+#personOutput {
+    font-size: 1.2rem;
+    color: #4e3b4e;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f5a6c2; /* Match header background */
+    color: white;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .fundamental-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .fundamental-section p {
+        font-size: 1rem;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+#cta_container {
+    margin: 5%;
+}
+.cta-button {
+    background-color: #f5a6c2; /* Soft pastel pink */
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+}
